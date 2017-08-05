@@ -16,22 +16,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.estimatedRowHeight = 36.0
-        //tableView.rowHeight = UITableViewAutomaticDimension
+       
         getLatestGnoquis()
         print("viewdidLoad -----> arrayGnoquis \(self.arrayGnoquis.count)")
 
  
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showGnoquiDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+               let destinationController = segue.destination as! GnoquiDetailViewController
+                destinationController.gnoquiStruct = arrayGnoquis[indexPath.row]
+            }
+        }
+        
     }
 
 
 }
 extension ViewController: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -43,9 +48,9 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! GnoquiTableViewCell
-        print("arrayGnoquis : \(arrayGnoquis[indexPath.row])")
+ 
         viewModel = GnoquiViewViewModel(gnoqui: arrayGnoquis[indexPath.row])
-        print("viewmodel :  \(viewModel)")
+ 
     // Configure the cell...
         if let viewModel = viewModel  {
             //

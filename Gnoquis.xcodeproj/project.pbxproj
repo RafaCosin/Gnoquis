@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		381190381F32588F007A2724 /* GnoquiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381190371F32588F007A2724 /* GnoquiProtocol.swift */; };
+		3886A32C1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886A32B1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift */; };
 		38BE87D61F32F5A700F23FEA /* FuncHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE87D51F32F5A700F23FEA /* FuncHelpers.swift */; };
 		38BE87FB1F334AE000F23FEA /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE87FA1F334AE000F23FEA /* UIImageViewExtension.swift */; };
-		38BE87FD1F3351DD00F23FEA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE87FC1F3351DD00F23FEA /* StringExtension.swift */; };
 		38C933531F3216BF00671A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933521F3216BF00671A32 /* AppDelegate.swift */; };
 		38C933551F3216BF00671A32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933541F3216BF00671A32 /* ViewController.swift */; };
 		38C933581F3216C000671A32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C933561F3216C000671A32 /* Main.storyboard */; };
@@ -20,13 +20,14 @@
 		38C933671F32176500671A32 /* Gnoqui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933661F32176500671A32 /* Gnoqui.swift */; };
 		38C9336B1F3236E800671A32 /* GnoquiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C9336A1F3236E800671A32 /* GnoquiTableViewCell.swift */; };
 		38C933741F323CFC00671A32 /* GnoquiViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933731F323CFC00671A32 /* GnoquiViewViewModel.swift */; };
+		38E1FE351F33A45C000AFFA5 /* GnoquiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		381190371F32588F007A2724 /* GnoquiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiProtocol.swift; sourceTree = "<group>"; };
+		3886A32B1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiDetailTableViewCell.swift; sourceTree = "<group>"; };
 		38BE87D51F32F5A700F23FEA /* FuncHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncHelpers.swift; sourceTree = "<group>"; };
 		38BE87FA1F334AE000F23FEA /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
-		38BE87FC1F3351DD00F23FEA /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		38C9334F1F3216BF00671A32 /* Gnoquis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnoquis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C933521F3216BF00671A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38C933541F3216BF00671A32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		38C933661F32176500671A32 /* Gnoqui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gnoqui.swift; sourceTree = "<group>"; };
 		38C9336A1F3236E800671A32 /* GnoquiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnoquiTableViewCell.swift; sourceTree = "<group>"; };
 		38C933731F323CFC00671A32 /* GnoquiViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiViewViewModel.swift; sourceTree = "<group>"; };
+		38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +61,18 @@
 			path = Protocolos;
 			sourceTree = "<group>";
 		};
+		3886A32A1F34E2E900A63238 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3886A32B1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift */,
+			);
+			path = "Table View Cell";
+			sourceTree = "<group>";
+		};
 		38BE87F91F334AB100F23FEA /* Extensiones */ = {
 			isa = PBXGroup;
 			children = (
 				38BE87FA1F334AE000F23FEA /* UIImageViewExtension.swift */,
-				38BE87FC1F3351DD00F23FEA /* StringExtension.swift */,
 			);
 			path = Extensiones;
 			sourceTree = "<group>";
@@ -111,6 +120,7 @@
 		38C9336D1F323BC900671A32 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				38E1FE331F33A410000AFFA5 /* Gnoqui Datail View Controller */,
 				38C933711F323C6300671A32 /* Gnoqui View Controller */,
 			);
 			path = "View Controllers";
@@ -144,8 +154,8 @@
 		38C933711F323C6300671A32 /* Gnoqui View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				381190361F325856007A2724 /* Protocolos */,
 				38C933541F3216BF00671A32 /* ViewController.swift */,
+				381190361F325856007A2724 /* Protocolos */,
 				38C933721F323CAC00671A32 /* View Model */,
 				38C933701F323C1600671A32 /* Table View Cell */,
 			);
@@ -158,6 +168,15 @@
 				38C933731F323CFC00671A32 /* GnoquiViewViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		38E1FE331F33A410000AFFA5 /* Gnoqui Datail View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3886A32A1F34E2E900A63238 /* Table View Cell */,
+				38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */,
+			);
+			path = "Gnoqui Datail View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,12 +253,13 @@
 			files = (
 				38C933741F323CFC00671A32 /* GnoquiViewViewModel.swift in Sources */,
 				38C933551F3216BF00671A32 /* ViewController.swift in Sources */,
-				38BE87FD1F3351DD00F23FEA /* StringExtension.swift in Sources */,
+				3886A32C1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift in Sources */,
 				38C933651F3216FA00671A32 /* InputData.swift in Sources */,
 				38BE87D61F32F5A700F23FEA /* FuncHelpers.swift in Sources */,
 				38C933671F32176500671A32 /* Gnoqui.swift in Sources */,
 				38BE87FB1F334AE000F23FEA /* UIImageViewExtension.swift in Sources */,
 				381190381F32588F007A2724 /* GnoquiProtocol.swift in Sources */,
+				38E1FE351F33A45C000AFFA5 /* GnoquiDetailViewController.swift in Sources */,
 				38C9336B1F3236E800671A32 /* GnoquiTableViewCell.swift in Sources */,
 				38C933531F3216BF00671A32 /* AppDelegate.swift in Sources */,
 			);
