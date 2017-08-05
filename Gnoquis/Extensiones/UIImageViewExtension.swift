@@ -16,10 +16,13 @@ extension UIImageView {
     func loadImageUsingCache(withUrl urlString : String) {
         let url = URL(string: urlString)
         self.image = nil
+        //dimensiones del imageView
+        let cgSize = CGSize(width: self.frame.size.width, height: self.frame.size.height)
+        print("*******cgSize : \(cgSize)")
        // Si la imagen ya está en cache, la recupera del diccionario
         if let cachedImage = imageCache.object(forKey: urlString as NSString) as? UIImage {
             //si img.height > img.width -> crop a tamaño de imageView
-            self.image = validateImg(img: cachedImage)
+            self.image = validateImg(img: cachedImage, imgViewSize: cgSize)
             return
         }
         
@@ -40,15 +43,17 @@ extension UIImageView {
             }
         }).resume()
     }
-    func validateImg(img:UIImage)-> UIImage {
-        let size = CGSize(width: 343, height: 260)
-        let origen = CGPoint(x: 45, y: 45)
-        let rect = CGRect(origin: origen, size: size)
-        var newImg = UIImage()
-        
+    //si la img a mostrar en ImageView img.Heigth > img.Width se recorta para dimensionarla
+
+    func validateImg(img:UIImage, imgViewSize: CGSize)-> UIImage {
+
         if img.size.height > img.size.width {
-            newImg = crop(image: img, cropRect: rect)!
-            return newImg
+            let coordIni = (img.size.height - img.size.width) / 4
+            let origen = CGPoint(x: coordIni, y: coordIni)
+            print("***************origen :\(origen)")
+            let rect = CGRect(origin: origen, size: imgViewSize)
+            print("***************rect :\(rect)")
+            return crop(image: img, cropRect: rect)!
         }
         return img
     }

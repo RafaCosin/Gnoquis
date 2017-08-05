@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Gnoqui View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gnoquis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GnoquiViewController" customModule="Gnoquis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,7 +112,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c8t-uv-Go9">
                                 <rect key="frame" x="16" y="64" width="343" height="260"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="260" id="fUS-Vp-e0N"/>
+                                    <constraint firstAttribute="width" constant="343" id="QWx-Of-I3Q"/>
+                                    <constraint firstAttribute="height" constant="260" id="mEs-oC-I49"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iaN-fA-FXS">
@@ -166,13 +167,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c8t-uv-Go9" firstAttribute="top" secondItem="0gk-TV-pNn" secondAttribute="top" id="1nZ-JF-qbp"/>
-                            <constraint firstItem="c8t-uv-Go9" firstAttribute="trailing" secondItem="Sux-6T-UtX" secondAttribute="trailingMargin" id="BS0-om-5Wa"/>
-                            <constraint firstItem="iaN-fA-FXS" firstAttribute="bottom" secondItem="0gk-TV-pNn" secondAttribute="bottom" id="aYY-sm-aCT"/>
-                            <constraint firstItem="c8t-uv-Go9" firstAttribute="trailing" secondItem="iaN-fA-FXS" secondAttribute="trailing" id="heU-nM-gvB"/>
-                            <constraint firstItem="c8t-uv-Go9" firstAttribute="leading" secondItem="iaN-fA-FXS" secondAttribute="leading" id="j8P-iu-pAw"/>
-                            <constraint firstItem="iaN-fA-FXS" firstAttribute="top" secondItem="c8t-uv-Go9" secondAttribute="bottom" id="p9h-Jt-tIr"/>
-                            <constraint firstItem="c8t-uv-Go9" firstAttribute="leading" secondItem="Sux-6T-UtX" secondAttribute="leadingMargin" id="xsg-Ja-F5r"/>
+                            <constraint firstItem="c8t-uv-Go9" firstAttribute="top" secondItem="0gk-TV-pNn" secondAttribute="top" id="2Tm-jO-1or"/>
+                            <constraint firstItem="iaN-fA-FXS" firstAttribute="top" secondItem="c8t-uv-Go9" secondAttribute="bottom" id="3uX-pZ-gSF"/>
+                            <constraint firstItem="iaN-fA-FXS" firstAttribute="bottom" secondItem="0gk-TV-pNn" secondAttribute="bottom" id="5Kg-uV-uOL"/>
+                            <constraint firstItem="c8t-uv-Go9" firstAttribute="leading" secondItem="Sux-6T-UtX" secondAttribute="leadingMargin" id="AR7-ki-kYI"/>
+                            <constraint firstItem="c8t-uv-Go9" firstAttribute="trailing" secondItem="iaN-fA-FXS" secondAttribute="trailing" id="etu-hZ-uNb"/>
+                            <constraint firstItem="c8t-uv-Go9" firstAttribute="leading" secondItem="iaN-fA-FXS" secondAttribute="leading" id="zL0-L8-t69"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0gk-TV-pNn"/>
                     </view>

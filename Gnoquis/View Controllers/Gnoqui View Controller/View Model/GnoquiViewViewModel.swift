@@ -33,7 +33,11 @@ struct GnoquiViewViewModel {
         return gnoqui.hair_color
     }
     var professions: [String] {
-        return gnoqui.professions
+        if gnoqui.professions.count > 0 {
+               return gnoqui.professions
+        } else {
+            return []
+        }
     }
     var friends: [String] {
         

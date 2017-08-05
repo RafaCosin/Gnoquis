@@ -19,6 +19,7 @@ class GnoquiDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setTableview(table: tableView)
         viewModel = GnoquiViewViewModel(gnoqui: gnoquiStruct)
         iconoImg.loadImageUsingCache(withUrl: viewModel.thumbail)

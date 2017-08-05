@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GnoquiViewController.swift
 //  Gnoquis
 //
 //  Created by kino on 2/08/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GnoquiViewController: UIViewController {
     var arrayGnoquis = [Gnoqui]()
     var viewModel: GnoquiViewViewModel!
     
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
 
 
 }
-extension ViewController: UITableViewDataSource {
+extension GnoquiViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -60,10 +60,9 @@ extension ViewController: UITableViewDataSource {
     }
     
 }
-extension ViewController {
+extension GnoquiViewController {
     
     func getLatestGnoquis() {
-     //   let request = URLRequest(url: URL(string: gnomesURL)!)
         let request = URLRequest(url: gnomesURL!)
 
         print(request)
@@ -77,36 +76,36 @@ extension ViewController {
                 print(error)
                 return
             }
-            
+
             // Parse JSON data
             if let data = data {
                 self.arrayGnoquis = self.parseJsonData(data: data)
                 // Reload table view
-          
+
                 OperationQueue.main.addOperation({ () -> Void in
                     self.tableView.reloadData()
                 })
-                
+
             }
-            
+
         })
-        
+
         task.resume()
     }
-    
-    
+
+
     func parseJsonData(data: Data) -> [Gnoqui] {
-        
+
         var gnoquis = [Gnoqui]()
-        
+
         do {
             let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
-            
+
             // Parse JSON data
             let jsonGnoquis = jsonResult?["Brastlewark"] as! [AnyObject]
             for jsonGnoqui in jsonGnoquis {
                 var gnoqui = Gnoqui()
-                
+
                 gnoqui.id = jsonGnoqui["id"] as! Int
                 gnoqui.name = jsonGnoqui["name"] as! String
                 gnoqui.thumbnail = changeHttps(urlString:jsonGnoqui["thumbnail"] as! String)
@@ -119,12 +118,13 @@ extension ViewController {
                 //print(gnoqui)
                 gnoquis.append(gnoqui)
             }
-            
+
         } catch {
             print(error)
         }
-        
+
         return gnoquis
     }
-    
+
 }
+
