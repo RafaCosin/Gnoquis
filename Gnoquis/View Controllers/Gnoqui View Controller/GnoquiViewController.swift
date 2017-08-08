@@ -7,22 +7,39 @@
 //
 
 import UIKit
+import  CoreData
 
 class GnoquiViewController: UIViewController {
-    var arrayGnoquis = [Gnoqui]()
+    var arrayGnoquis = [GnoquisMO]()
     var viewModel: GnoquiViewViewModel!
+    var gnoquiStorage = GnoquiStorageController()
+    
+    var gnoquisMO = [GnoquisMO]()
+    var hayDatos: Bool!
+    let key = "coreDataLoad"
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        getLatestGnoquis()
-        print("viewdidLoad -----> arrayGnoquis \(self.arrayGnoquis.count)")
 
- 
+        hayDatos = getUserDefaults(key: key)
+        if !hayDatos {
+           getJson(url: gnomesURL!)
+           setUserDefaults(key: key)
+         }
+        
+    
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        if  arrayGnoquis.count == 0  {
+            arrayGnoquis = gnoquiStorage.fetchCoreData()
+        }
+        //tableView.reloadData()
+        return
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showGnoquiDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
@@ -30,11 +47,9 @@ class GnoquiViewController: UIViewController {
                 destinationController.gnoquiStruct = arrayGnoquis[indexPath.row]
             }
         }
-        
     }
-
-
 }
+
 extension GnoquiViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,9 +66,7 @@ extension GnoquiViewController: UITableViewDataSource {
  
         viewModel = GnoquiViewViewModel(gnoqui: arrayGnoquis[indexPath.row])
  
-    // Configure the cell...
         if let viewModel = viewModel  {
-            //
             cell.configure(withViewModel: viewModel)
         }
     return cell
@@ -61,70 +74,76 @@ extension GnoquiViewController: UITableViewDataSource {
     
 }
 extension GnoquiViewController {
-    
-    func getLatestGnoquis() {
-        let request = URLRequest(url: gnomesURL!)
-
-        print(request)
-        let urlSession = URLSession.shared
-        let task = urlSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
-//            if let response = response {
-//                print(response)
-//                return
-//            }
-            if let error = error {
-                print(error)
-                return
-            }
-
-            // Parse JSON data
-            if let data = data {
-                self.arrayGnoquis = self.parseJsonData(data: data)
-                // Reload table view
-
+     
+     func getJson(url: URL) {
+         let gnoquiStorage = GnoquiStorageController()
+         let context = gnoquiStorage.context
+        
+        
+         let urlSession = URLSession.shared
+         let task = urlSession.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
+         //            if let response = response {
+         //                print(response)
+         //                return
+         //            }
+                if let error = error {
+                        print(error)
+                        return
+                }
+             if let data = data {
+                self.arrayGnoquis = self.parseJsonMO(data: data, context: context)
+                if !self.arrayGnoquis.isEmpty {
+                    self.saveArrayGnoqui(gnoquiMO: self.arrayGnoquis, context: context)
+                }
+             
                 OperationQueue.main.addOperation({ () -> Void in
+                    self.arrayGnoquis = self.gnoquiStorage.fetchCoreData()
                     self.tableView.reloadData()
                 })
-
-            }
-
-        })
-
-        task.resume()
-    }
-
-
-    func parseJsonData(data: Data) -> [Gnoqui] {
-
-        var gnoquis = [Gnoqui]()
-
+             }
+         })
+         task.resume()
+     }
+    
+    func parseJsonMO(data: Data, context : NSManagedObjectContext) -> [GnoquisMO] {
+        
+        var gnoquisMO = [GnoquisMO]()
+        
         do {
             let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
-
+            
             // Parse JSON data
             let jsonGnoquis = jsonResult?["Brastlewark"] as! [AnyObject]
             for jsonGnoqui in jsonGnoquis {
-                var gnoqui = Gnoqui()
-
-                gnoqui.id = jsonGnoqui["id"] as! Int
-                gnoqui.name = jsonGnoqui["name"] as! String
+                let gnoqui = GnoquisMO(context: context)
+                
+                gnoqui.id = Int16(jsonGnoqui["id"] as! Int)
+                gnoqui.name = jsonGnoqui["name"] as? String
                 gnoqui.thumbnail = changeHttps(urlString:jsonGnoqui["thumbnail"] as! String)
-                gnoqui.age = jsonGnoqui["age"] as! Int
+                gnoqui.age = Int16(jsonGnoqui["age"] as! Int)
                 gnoqui.weight = jsonGnoqui["weight"] as! Double
                 gnoqui.height = jsonGnoqui["height"] as! Double
-                gnoqui.hair_color = jsonGnoqui["hair_color"] as! String
-                gnoqui.professions = jsonGnoqui["professions"] as! [String]
-                gnoqui.friends = jsonGnoqui["friends"] as! [String]
-                //print(gnoqui)
-                gnoquis.append(gnoqui)
+                gnoqui.hair_color = jsonGnoqui["hair_color"] as? String
+                gnoqui.professions = jsonGnoqui["professions"] as! [String] as NSObject
+                gnoqui.friends = jsonGnoqui["friends"] as! [String] as NSObject
+                gnoquisMO.append(gnoqui)
             }
-
+            
         } catch {
             print(error)
         }
-
-        return gnoquis
+        return gnoquisMO
     }
-
+    
+    func saveArrayGnoqui(gnoquiMO: [GnoquisMO], context: NSManagedObjectContext) {
+        do {
+            try context.save()
+        } catch {
+            let saveError = error as NSError
+            print("ERROR in load entity Gnoqui")
+            print("Error : \(saveError)  info: \(saveError.localizedDescription)")
+            
+        }
+    }
 }
 

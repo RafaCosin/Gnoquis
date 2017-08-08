@@ -11,7 +11,7 @@ import UIKit
 class GnoquiDetailViewController: UIViewController {
   
     var viewModel: GnoquiViewViewModel!
-    var gnoquiStruct : Gnoqui!
+    var gnoquiStruct : GnoquisMO!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,7 +20,7 @@ class GnoquiDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTableview(table: tableView)
+        prepareTableview(table: tableView)
         viewModel = GnoquiViewViewModel(gnoqui: gnoquiStruct)
         iconoImg.loadImageUsingCache(withUrl: viewModel.thumbail)
     }
@@ -39,7 +39,7 @@ extension GnoquiDetailViewController: UITableViewDataSource {
         }
         return cell
     }
-    func setTableview(table: UITableView) {
+    func prepareTableview(table: UITableView) {
         tableView.estimatedRowHeight = 80.0
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView(frame: .zero)

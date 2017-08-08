@@ -9,47 +9,62 @@
 import UIKit
 
 struct GnoquiViewViewModel {
-    let gnoqui: Gnoqui
+    let gnoqui: GnoquisMO
     
     var id: Int {
-        return gnoqui.id
+        return Int(gnoqui.id)
     }
     
     var name: String {
-        return gnoqui.name
+        if !((gnoqui.name?.isEmpty)!) {
+            return gnoqui.name!
+        }
+        return ""
     }
     
     var age: Int {
-        return gnoqui.age
+        if gnoqui.age > 0 {
+            return Int(gnoqui.age)
+        }
+        return 0
     }
     var weight: Double {
-        return gnoqui.weight
+        if (gnoqui.weight > 0.0) {
+            return gnoqui.weight
+        }
+        return 0.0
     }
     var height: Double {
-        return gnoqui.height
+        if (gnoqui.height > 0.0) {
+            return gnoqui.height
+        }
+        return 0.0
     }
     
     var hair_color: String {
-        return gnoqui.hair_color
+        if !(gnoqui.hair_color?.isEmpty)! {
+           return gnoqui.hair_color!
+        }
+        return ""
     }
     var professions: [String] {
-        if gnoqui.professions.count > 0 {
-               return gnoqui.professions
+        if ((gnoqui.professions?.hashValue) != nil) {
+            return gnoqui.professions as! [String]
         } else {
-            return []
+           return []
         }
     }
     var friends: [String] {
         
-        if gnoqui.friends.count > 0 {
-            return gnoqui.friends
+        if ((gnoqui.friends?.hashValue) != nil) {
+            return gnoqui.friends as! [String]
         } else {
             return []
         }
     }
     var thumbail: String {
-        if  gnoqui.thumbnail != "" {
-            return gnoqui.thumbnail
+        if  gnoqui.thumbnail != nil {
+            return gnoqui.thumbnail!
         }
         return ""
     }

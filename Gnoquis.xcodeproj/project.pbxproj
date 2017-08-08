@@ -7,27 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		381190381F32588F007A2724 /* GnoquiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381190371F32588F007A2724 /* GnoquiProtocol.swift */; };
+		384BB66D1F378DA500CADB4E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BB66C1F378DA500CADB4E /* CoreDataStack.swift */; };
+		384BB6711F378F2200CADB4E /* Gnoquis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 384BB66F1F378F2200CADB4E /* Gnoquis.xcdatamodeld */; };
+		384BB6741F379D2D00CADB4E /* GnoquiStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384BB6731F379D2D00CADB4E /* GnoquiStorageController.swift */; };
 		3886A32C1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3886A32B1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift */; };
 		38BE87D61F32F5A700F23FEA /* FuncHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE87D51F32F5A700F23FEA /* FuncHelpers.swift */; };
 		38BE87FB1F334AE000F23FEA /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE87FA1F334AE000F23FEA /* UIImageViewExtension.swift */; };
+		38C4E6981F39A7100054F555 /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C4E6971F39A7100054F555 /* GetData.swift */; };
 		38C933531F3216BF00671A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933521F3216BF00671A32 /* AppDelegate.swift */; };
 		38C933551F3216BF00671A32 /* GnoquiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933541F3216BF00671A32 /* GnoquiViewController.swift */; };
 		38C933581F3216C000671A32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C933561F3216C000671A32 /* Main.storyboard */; };
 		38C9335A1F3216C000671A32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C933591F3216C000671A32 /* Assets.xcassets */; };
 		38C9335D1F3216C000671A32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C9335B1F3216C000671A32 /* LaunchScreen.storyboard */; };
 		38C933651F3216FA00671A32 /* InputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933641F3216FA00671A32 /* InputData.swift */; };
-		38C933671F32176500671A32 /* Gnoqui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933661F32176500671A32 /* Gnoqui.swift */; };
 		38C9336B1F3236E800671A32 /* GnoquiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C9336A1F3236E800671A32 /* GnoquiTableViewCell.swift */; };
 		38C933741F323CFC00671A32 /* GnoquiViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933731F323CFC00671A32 /* GnoquiViewViewModel.swift */; };
 		38E1FE351F33A45C000AFFA5 /* GnoquiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		381190371F32588F007A2724 /* GnoquiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiProtocol.swift; sourceTree = "<group>"; };
+		384BB66C1F378DA500CADB4E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		384BB6701F378F2200CADB4E /* Gnoqui.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gnoqui.xcdatamodel; sourceTree = "<group>"; };
+		384BB6731F379D2D00CADB4E /* GnoquiStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiStorageController.swift; sourceTree = "<group>"; };
 		3886A32B1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiDetailTableViewCell.swift; sourceTree = "<group>"; };
 		38BE87D51F32F5A700F23FEA /* FuncHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncHelpers.swift; sourceTree = "<group>"; };
 		38BE87FA1F334AE000F23FEA /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		38C4E6971F39A7100054F555 /* GetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
 		38C9334F1F3216BF00671A32 /* Gnoquis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnoquis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C933521F3216BF00671A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38C933541F3216BF00671A32 /* GnoquiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +41,6 @@
 		38C9335C1F3216C000671A32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38C9335E1F3216C000671A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38C933641F3216FA00671A32 /* InputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputData.swift; sourceTree = "<group>"; };
-		38C933661F32176500671A32 /* Gnoqui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gnoqui.swift; sourceTree = "<group>"; };
 		38C9336A1F3236E800671A32 /* GnoquiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnoquiTableViewCell.swift; sourceTree = "<group>"; };
 		38C933731F323CFC00671A32 /* GnoquiViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiViewViewModel.swift; sourceTree = "<group>"; };
 		38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiDetailViewController.swift; sourceTree = "<group>"; };
@@ -53,12 +57,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		381190361F325856007A2724 /* Protocolos */ = {
+		384BB66E1F378EEA00CADB4E /* Core Data Stack */ = {
 			isa = PBXGroup;
 			children = (
-				381190371F32588F007A2724 /* GnoquiProtocol.swift */,
+				384BB66C1F378DA500CADB4E /* CoreDataStack.swift */,
+				384BB66F1F378F2200CADB4E /* Gnoquis.xcdatamodeld */,
 			);
-			path = Protocolos;
+			path = "Core Data Stack";
+			sourceTree = "<group>";
+		};
+		384BB6721F379CED00CADB4E /* Gnoqui Storage Controller */ = {
+			isa = PBXGroup;
+			children = (
+				384BB6731F379D2D00CADB4E /* GnoquiStorageController.swift */,
+			);
+			path = "Gnoqui Storage Controller";
 			sourceTree = "<group>";
 		};
 		3886A32A1F34E2E900A63238 /* Table View Cell */ = {
@@ -105,24 +118,17 @@
 		38C933511F3216BF00671A32 /* Gnoquis */ = {
 			isa = PBXGroup;
 			children = (
-				38A7538E1F361A1B006B38A1 /* Storyboards */,
+				384BB6721F379CED00CADB4E /* Gnoqui Storage Controller */,
 				38C9336F1F323BFD00671A32 /* Application Delegate */,
-				38C9336E1F323BE500671A32 /* Recursos */,
+				384BB66E1F378EEA00CADB4E /* Core Data Stack */,
+				38A7538E1F361A1B006B38A1 /* Storyboards */,
 				38C9336D1F323BC900671A32 /* View Controllers */,
-				38C9336C1F323BAA00671A32 /* Modelos */,
 				38BE87F91F334AB100F23FEA /* Extensiones */,
+				38C9336E1F323BE500671A32 /* Recursos */,
 				38C933591F3216C000671A32 /* Assets.xcassets */,
 				38C9335E1F3216C000671A32 /* Info.plist */,
 			);
 			path = Gnoquis;
-			sourceTree = "<group>";
-		};
-		38C9336C1F323BAA00671A32 /* Modelos */ = {
-			isa = PBXGroup;
-			children = (
-				38C933661F32176500671A32 /* Gnoqui.swift */,
-			);
-			path = Modelos;
 			sourceTree = "<group>";
 		};
 		38C9336D1F323BC900671A32 /* View Controllers */ = {
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				38C933521F3216BF00671A32 /* AppDelegate.swift */,
+				38C4E6971F39A7100054F555 /* GetData.swift */,
 			);
 			path = "Application Delegate";
 			sourceTree = "<group>";
@@ -163,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				38C933541F3216BF00671A32 /* GnoquiViewController.swift */,
-				381190361F325856007A2724 /* Protocolos */,
 				38C933721F323CAC00671A32 /* View Model */,
 				38C933701F323C1600671A32 /* Table View Cell */,
 			);
@@ -260,13 +266,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C933741F323CFC00671A32 /* GnoquiViewViewModel.swift in Sources */,
+				38C4E6981F39A7100054F555 /* GetData.swift in Sources */,
 				38C933551F3216BF00671A32 /* GnoquiViewController.swift in Sources */,
 				3886A32C1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift in Sources */,
+				384BB66D1F378DA500CADB4E /* CoreDataStack.swift in Sources */,
+				384BB6741F379D2D00CADB4E /* GnoquiStorageController.swift in Sources */,
 				38C933651F3216FA00671A32 /* InputData.swift in Sources */,
 				38BE87D61F32F5A700F23FEA /* FuncHelpers.swift in Sources */,
-				38C933671F32176500671A32 /* Gnoqui.swift in Sources */,
+				384BB6711F378F2200CADB4E /* Gnoquis.xcdatamodeld in Sources */,
 				38BE87FB1F334AE000F23FEA /* UIImageViewExtension.swift in Sources */,
-				381190381F32588F007A2724 /* GnoquiProtocol.swift in Sources */,
 				38E1FE351F33A45C000AFFA5 /* GnoquiDetailViewController.swift in Sources */,
 				38C9336B1F3236E800671A32 /* GnoquiTableViewCell.swift in Sources */,
 				38C933531F3216BF00671A32 /* AppDelegate.swift in Sources */,
@@ -408,6 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9EDZ5LUZ76;
 				INFOPLIST_FILE = Gnoquis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafacosin.Gnoquis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,6 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9EDZ5LUZ76;
 				INFOPLIST_FILE = Gnoquis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafacosin.Gnoquis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,6 +462,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		384BB66F1F378F2200CADB4E /* Gnoquis.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				384BB6701F378F2200CADB4E /* Gnoqui.xcdatamodel */,
+			);
+			currentVersion = 384BB6701F378F2200CADB4E /* Gnoqui.xcdatamodel */;
+			path = Gnoquis.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 38C933471F3216BF00671A32 /* Project object */;
 }

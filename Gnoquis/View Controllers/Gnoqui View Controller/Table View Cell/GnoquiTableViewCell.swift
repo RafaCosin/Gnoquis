@@ -27,7 +27,6 @@ class GnoquiTableViewCell: UITableViewCell {
     func configure(withViewModel viewModel : GnoquiViewViewModel) {
         nameLabel.text = viewModel.name
         professionLabel.text = viewModel.professions.joined(separator: ", ")
-        
         iconoImg.loadImageUsingCache(withUrl: viewModel.thumbail)   
     }
     
