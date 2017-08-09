@@ -13,8 +13,7 @@ class GnoquiViewController: UIViewController {
     var arrayGnoquis = [GnoquisMO]()
     var viewModel: GnoquiViewViewModel!
     var gnoquiStorage = GnoquiStorageController()
-    
-    var gnoquisMO = [GnoquisMO]()
+
     var hayDatos: Bool!
     let key = "coreDataLoad"
     
@@ -24,19 +23,18 @@ class GnoquiViewController: UIViewController {
         super.viewDidLoad()
 
         hayDatos = getUserDefaults(key: key)
+        print("hay datos: \(hayDatos)")
         if !hayDatos {
            getJson(url: gnomesURL!)
            setUserDefaults(key: key)
          }
-        
-    
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         if  arrayGnoquis.count == 0  {
             arrayGnoquis = gnoquiStorage.fetchCoreData()
         }
-        //tableView.reloadData()
+        tableView.reloadData()
         return
     }
     
@@ -50,7 +48,7 @@ class GnoquiViewController: UIViewController {
     }
 }
 
-extension GnoquiViewController: UITableViewDataSource {
+extension GnoquiViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

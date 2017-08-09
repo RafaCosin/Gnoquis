@@ -17,21 +17,10 @@ class GnoquiStorageController {
     init() {
         coreDataStack = CoreDataStack()
         context = coreDataStack.persistentContainer.viewContext
-        print("Context : \(context)")
+
+
     }
-    
-    
-//    //Carga en entityGnoquis
-//    func saveArrayGnoqui(gnoquiMO: [GnoquisMO]) {
-//        do {
-//            try context.save()
-//        } catch {
-//            let saveError = error as NSError
-//            print("ERROR in load entity Gnoqui")
-//            print("Error : \(saveError)  info: \(saveError.localizedDescription)")
-//            
-//        }
-//    }
+
 
     //Read todos los gnoquis Gnoquis
     func fetchCoreData() -> [GnoquisMO] {

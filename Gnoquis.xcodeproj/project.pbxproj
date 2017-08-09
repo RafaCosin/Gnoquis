@@ -23,6 +23,7 @@
 		38C9336B1F3236E800671A32 /* GnoquiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C9336A1F3236E800671A32 /* GnoquiTableViewCell.swift */; };
 		38C933741F323CFC00671A32 /* GnoquiViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933731F323CFC00671A32 /* GnoquiViewViewModel.swift */; };
 		38E1FE351F33A45C000AFFA5 /* GnoquiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */; };
+		38FCA6A01F3AF019005AB6E1 /* UIImageView+FaceAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCA69F1F3AF019005AB6E1 /* UIImageView+FaceAware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		38C9336A1F3236E800671A32 /* GnoquiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnoquiTableViewCell.swift; sourceTree = "<group>"; };
 		38C933731F323CFC00671A32 /* GnoquiViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiViewViewModel.swift; sourceTree = "<group>"; };
 		38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiDetailViewController.swift; sourceTree = "<group>"; };
+		38FCA69F1F3AF019005AB6E1 /* UIImageView+FaceAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+FaceAware.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				38BE87FA1F334AE000F23FEA /* UIImageViewExtension.swift */,
+				38FCA69F1F3AF019005AB6E1 /* UIImageView+FaceAware.swift */,
 			);
 			path = Extensiones;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				3886A32C1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift in Sources */,
 				384BB66D1F378DA500CADB4E /* CoreDataStack.swift in Sources */,
 				384BB6741F379D2D00CADB4E /* GnoquiStorageController.swift in Sources */,
+				38FCA6A01F3AF019005AB6E1 /* UIImageView+FaceAware.swift in Sources */,
 				38C933651F3216FA00671A32 /* InputData.swift in Sources */,
 				38BE87D61F32F5A700F23FEA /* FuncHelpers.swift in Sources */,
 				384BB6711F378F2200CADB4E /* Gnoquis.xcdatamodeld in Sources */,

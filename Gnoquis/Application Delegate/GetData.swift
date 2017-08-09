@@ -32,9 +32,9 @@ class GetData {
             // Parse JSON data
             if let data = data {
                 self.gnoquisMO = self.parseJsonMO(data: data)
-                 print("retorno de parsejson self.gnoquisMO")
                 if !self.gnoquisMO.isEmpty {
                     self.saveArrayGnoqui(gnoquiMO: self.gnoquisMO )
+                    
                 }
                 
             }

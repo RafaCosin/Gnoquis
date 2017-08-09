@@ -55,16 +55,17 @@ extension UIImageView {
     func validateImg(img:UIImage, imgViewSize: CGSize)-> UIImage {
         var imgViewSize = imgViewSize
         let coordIni = (img.size.height - img.size.width) / 4
-        var origen = CGPoint(x: coordIni, y: coordIni)
+        let origen = CGPoint(x: coordIni, y: coordIni)
             
         if img.size.height > img.size.width {
-            //para avatar se corrige tamaño recorte y  la posicion inicial para
-            //las fotos descentrada. Es una chapuza total
+
+//            //para avatar se corrige tamaño recorte y  la posicion inicial para
+//            //las fotos descentrada. Es una chapuza total
             if imgViewSize.width < 80.0 {
                 imgViewSize.width = img.size.width/2
                 imgViewSize.height = img.size.height/2
-                origen.x += 30.0
-                origen.y -= 40.0
+                //origen.x += 30.0
+               // origen.y -= 40.0
             }
             let rect = CGRect(origin: origen, size: imgViewSize)
             return crop(image: img, cropRect: rect)!
