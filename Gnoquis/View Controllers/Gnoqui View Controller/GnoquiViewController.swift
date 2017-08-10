@@ -55,8 +55,9 @@ class GnoquiViewController: UIViewController {
 }
 extension GnoquiViewController: MenuViewControllerDelegate {
     func retornoValor(with: String) {
-        //valor.text = String(describing : with)
-        print("retornoValor : \(with)")
+        arrayGnoquis = gnoquiStorage.fetchGnoquis(filtro: with)
+        tableView.reloadData()
+        title = "Gnoquis orden : " + " \(with) "
     }
 }
 extension GnoquiViewController: UITableViewDataSource, UITableViewDelegate {

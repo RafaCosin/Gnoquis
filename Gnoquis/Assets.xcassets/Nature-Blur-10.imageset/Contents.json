@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "duende_molon.jpeg",
+      "filename" : "Nature-Blur-10.jpg",
       "scale" : "1x"
     },
     {
@@ -11,7 +11,6 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "duende_molon-1.jpeg",
       "scale" : "3x"
     }
   ],

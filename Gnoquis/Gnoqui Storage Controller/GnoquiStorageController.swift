@@ -49,22 +49,23 @@ class GnoquiStorageController {
         
     }
     // Seleccion  de un criterio
-    func fetchPlaces (filtro : String) -> [GnoquisMO] {
+    func fetchGnoquis (filtro : String) -> [GnoquisMO] {
         
         var gnoquis: [GnoquisMO] = []
-        
+        let criterio = String(filtro).lowercased()
         
         var fetchResultController : NSFetchedResultsController<GnoquisMO>
         let fetchRequest : NSFetchRequest<GnoquisMO> = GnoquisMO.fetchRequest()
-        
         //clausulas de filtro
-        let predicate1 = NSPredicate(format: "name == %@", filtro)
-        let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1] )
-        
-        fetchRequest.predicate = predicate
+       
+            
+//    
+//        let predicate1 = NSPredicate(format: "name == %@", filtro)
+//        let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1] )
+//        fetchRequest.predicate = predicate
         
         //Ordenacion
-        let sortDescriptor = NSSortDescriptor(key: "nameplace", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: criterio, ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         //Fetch

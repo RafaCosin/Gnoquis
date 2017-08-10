@@ -10,20 +10,30 @@ import UIKit
 
 class MenuViewController: UIViewController {
     //Referencia al delegate
-    var menuItems = ["Hamburguer","Id", "Name", "Age", "Weight", "Height"]
+    var menuItems = ["Id", "Name", "Age", "Hair color", "Weight", "Height"]
    
     @IBOutlet weak var tableView: UITableView!
     var delegate: MenuViewControllerDelegate?
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableView.separatorStyle = .none
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "Nature-Blur-11.jpg")?.draw(in: self.view.bounds)
+        
+        if let image: UIImage = UIGraphicsGetImageFromCurrentImageContext(){
+            UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image)
+        }else{
+            UIGraphicsEndImageContext()
+            debugPrint("Image not available")
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
@@ -42,18 +52,15 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // Return the number of sections.
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in the section.
         return menuItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! MenuViewControllerTableViewCell
-        print("menuItem : \(menuItems[indexPath.row])")
         cell.configure(data: menuItems[indexPath.row])
 
         
