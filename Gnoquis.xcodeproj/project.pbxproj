@@ -71,6 +71,7 @@
 		384BB6721F379CED00CADB4E /* Gnoqui Storage Controller */ = {
 			isa = PBXGroup;
 			children = (
+				38C4E6971F39A7100054F555 /* GetData.swift */,
 				384BB6731F379D2D00CADB4E /* GnoquiStorageController.swift */,
 			);
 			path = "Gnoqui Storage Controller";
@@ -121,11 +122,11 @@
 		38C933511F3216BF00671A32 /* Gnoquis */ = {
 			isa = PBXGroup;
 			children = (
-				384BB6721F379CED00CADB4E /* Gnoqui Storage Controller */,
 				38C9336F1F323BFD00671A32 /* Application Delegate */,
 				384BB66E1F378EEA00CADB4E /* Core Data Stack */,
 				38A7538E1F361A1B006B38A1 /* Storyboards */,
 				38C9336D1F323BC900671A32 /* View Controllers */,
+				384BB6721F379CED00CADB4E /* Gnoqui Storage Controller */,
 				38BE87F91F334AB100F23FEA /* Extensiones */,
 				38C9336E1F323BE500671A32 /* Recursos */,
 				38C933591F3216C000671A32 /* Assets.xcassets */,
@@ -156,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				38C933521F3216BF00671A32 /* AppDelegate.swift */,
-				38C4E6971F39A7100054F555 /* GetData.swift */,
 			);
 			path = "Application Delegate";
 			sourceTree = "<group>";

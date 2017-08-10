@@ -69,7 +69,7 @@ extension GnoquiViewController: UITableViewDataSource, UITableViewDelegate {
         }
     return cell
     }
-    
+
 }
 extension GnoquiViewController {
      
