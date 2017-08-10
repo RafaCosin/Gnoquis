@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Gnoqui View Controller-->
+        <!--Gnoquis-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GnoquiViewController" customModule="Gnoquis" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aRK-g3-TX2"/>
+                    <navigationItem key="navigationItem" title="Gnoquis" id="aRK-g3-TX2">
+                        <barButtonItem key="leftBarButtonItem" image="Hamburger" id="2vZ-sC-e60">
+                            <connections>
+                                <segue destination="THi-h7-l0t" kind="showDetail" identifier="showMenu" id="NQk-Pk-UPo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="yJn-th-Bu0" id="HuJ-tM-OXa"/>
                     </connections>
@@ -187,6 +193,63 @@
             </objects>
             <point key="canvasLocation" x="1544.8" y="138.98050974512745"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="xze-y7-X8c">
+            <objects>
+                <viewController id="THi-h7-l0t" customClass="MenuViewController" customModule="Gnoquis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVY-Yx-QyE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AfN-Dw-6bv">
+                                <rect key="frame" x="0.0" y="0.0" width="257" height="627"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="60" id="9Ay-A2-hXt" customClass="MenuViewControllerTableViewCell" customModule="Gnoquis" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="257" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Ay-A2-hXt" id="XNr-Do-sEm">
+                                            <rect key="frame" x="0.0" y="0.0" width="257" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzR-r3-oUf">
+                                                    <rect key="frame" x="8" y="4" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0g4-de-FgP">
+                                                    <rect key="frame" x="66" y="4" width="183" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="getFilter:" destination="THi-h7-l0t" eventType="touchUpInside" id="7NA-aD-J9N"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="boton" destination="0g4-de-FgP" id="M2J-bc-Uxw"/>
+                                            <outlet property="imgView" destination="jzR-r3-oUf" id="uAL-HE-nFx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="THi-h7-l0t" id="nYo-DA-Eov"/>
+                                    <outlet property="delegate" destination="THi-h7-l0t" id="lcA-OG-3zO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="jND-Ca-XMz"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="AfN-Dw-6bv" id="RTE-wT-5d0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOd-Xk-Bci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612" y="-578.86056971514245"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="92N-YB-h19">
             <objects>
@@ -206,4 +269,7 @@
             <point key="canvasLocation" x="-146" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hamburger" width="50" height="50"/>
+    </resources>
 </document>

@@ -13,7 +13,7 @@ class GnoquiViewController: UIViewController {
     var arrayGnoquis = [GnoquisMO]()
     var viewModel: GnoquiViewViewModel!
     var gnoquiStorage = GnoquiStorageController()
-
+    var data: Data?
     var hayDatos: Bool!
     let key = "coreDataLoad"
     
@@ -45,9 +45,20 @@ class GnoquiViewController: UIViewController {
                 destinationController.gnoquiStruct = arrayGnoquis[indexPath.row]
             }
         }
+        
+        if segue.identifier == "showMenu" {
+            if let destination = segue.destination as? MenuViewController {
+                destination.delegate = self
+            }
+        }
     }
 }
-
+extension GnoquiViewController: MenuViewControllerDelegate {
+    func retornoValor(with: String) {
+        //valor.text = String(describing : with)
+        print("retornoValor : \(with)")
+    }
+}
 extension GnoquiViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
