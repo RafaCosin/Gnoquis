@@ -51,13 +51,22 @@ class GnoquiViewController: UIViewController {
                 destination.delegate = self
             }
         }
+        if segue.identifier == "showMenuXib" {
+            if let destination = segue.destination as? MenuViewController {
+                destination.delegate = self
+            }
+        }
     }
 }
 extension GnoquiViewController: MenuViewControllerDelegate {
     func retornoValor(with: String) {
         arrayGnoquis = gnoquiStorage.fetchGnoquis(filtro: with)
         tableView.reloadData()
-        title = "Gnoquis orden : " + " \(with) "
+        if with != "Id" {
+        title = "Gnoquis order by" + " \(with) "
+        } else {
+            title = "Gnoquis"
+        }
     }
 }
 extension GnoquiViewController: UITableViewDataSource, UITableViewDelegate {

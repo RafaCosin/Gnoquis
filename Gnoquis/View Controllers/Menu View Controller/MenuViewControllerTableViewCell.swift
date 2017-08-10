@@ -19,15 +19,17 @@ class MenuViewControllerTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(data : String ) {
-        print("data: \(data)")
-        
+    func configure(data : String, icono: String? ) {
         boton.setTitle(data, for: .normal)
-        imgView.image = cargaIcono(iconName:data)
+        if let ico = icono {
+            imgView.image = cargaIcono(iconName: ico)
+        }
+        imgView.image = cargaIcono(iconName: icono!)
     }
+    
     func cargaIcono(iconName: String) -> UIImage {
-        if iconName != "Hamburguer" {
-            return UIImage(named: "Hamburger")!
+        if !iconName.isEmpty {
+            return UIImage(named: iconName)!
         }
         return UIImage(named: "duende_molon")!
     }
