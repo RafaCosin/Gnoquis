@@ -28,26 +28,26 @@ class GnoquiDetailTableViewCell: UITableViewCell {
     func configure(withViewModel viewModel : GnoquiViewViewModel, indexPath: Int) {
         switch indexPath {
         case 0:
-            campoLabel.text = "Name"
+            campoLabel.text = NSLocalizedString("Name",comment: "")
             valorLabel.text = viewModel.name
         case 1:
-            campoLabel.text = "Age"
+            campoLabel.text = NSLocalizedString("Age",comment: "")
             valorLabel.text = String(viewModel.age)
             
         case 2:
-            campoLabel.text = "Height"
+            campoLabel.text = NSLocalizedString("Height",comment: "")
             valorLabel.text =  String(viewModel.height)
         case 3:
-            campoLabel.text = "Weight"
+            campoLabel.text = NSLocalizedString("Weight", comment: "")
             valorLabel.text = String(viewModel.weight)
         case 4:
-            campoLabel.text = "Hair color"
+            campoLabel.text = NSLocalizedString("Hair color", comment: "")
             valorLabel.text = viewModel.hair_color
         case 5:
-            campoLabel.text = "Professions"
+            campoLabel.text = NSLocalizedString("Professions", comment: "")
             valorLabel.text = viewModel.professions.joined(separator: ", ")
         case 6:
-            campoLabel.text = "Friends"
+            campoLabel.text = NSLocalizedString("Friends", comment: "")
             valorLabel.text = viewModel.friends.joined(separator: ", ")
  
 

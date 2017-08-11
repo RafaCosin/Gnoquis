@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0g4-de-FgP"; */
+"0g4-de-FgP.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "22a-nv-WgU"; */
+"22a-nv-WgU.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Gnoquis Filters"; ObjectID = "5A5-GT-RO8"; */
+"5A5-GT-RO8.title" = "Gnoquis Filtros";
+
+/* Class = "UILabel"; text = "Profession"; ObjectID = "IeP-5H-6Qb"; */
+"IeP-5H-6Qb.text" = "Profesion";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Uzo-En-ciz"; */
+"Uzo-En-ciz.text" = "Nombre";
+
+/* Class = "UINavigationItem"; title = "Gnoquis"; ObjectID = "aRK-g3-TX2"; */
+"aRK-g3-TX2.title" = "Gnoquis";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cXd-yt-0Dk"; */
+"cXd-yt-0Dk.text" = "Label";
+
+/* Class = "UILabel"; text = "Carpintero, albañil, Herrero, Maestro, Cristalero "; ObjectID = "gfb-mo-M3n"; */
+"gfb-mo-M3n.text" = "Carpintero, albañil, Herrero, Maestro, Cristalero ";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "rVP-uF-QpG"; */
+"rVP-uF-QpG.title" = "Title";

@@ -51,17 +51,19 @@ class GnoquiViewController: UIViewController {
                 destination.delegate = self
             }
         }
+
+        
     }
 }
 
 //************* Tratamiento del pase de parametros desde Menugnoquis
 extension GnoquiViewController: MenuViewControllerDelegate {
     func retornoValor(with: String) {
+
         if  !with.isEmpty && with != "Cancel" {
             data = with
-       
         
-        arrayGnoquis = gnoquiStorage.fetchGnoquis(filtro: with)
+            arrayGnoquis = gnoquiStorage.fetchGnoquis(filtro: with)
         }
      
     }

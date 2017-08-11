@@ -25,7 +25,9 @@
 		38C933651F3216FA00671A32 /* InputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933641F3216FA00671A32 /* InputData.swift */; };
 		38C9336B1F3236E800671A32 /* GnoquiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C9336A1F3236E800671A32 /* GnoquiTableViewCell.swift */; };
 		38C933741F323CFC00671A32 /* GnoquiViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C933731F323CFC00671A32 /* GnoquiViewViewModel.swift */; };
+		38C99C001F3E5B3600CB0F3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38C99C021F3E5B3600CB0F3F /* Localizable.strings */; };
 		38E1FE351F33A45C000AFFA5 /* GnoquiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */; };
+		38F1E0101F3E093500AC4A32 /* GnoquiAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1E00F1F3E093500AC4A32 /* GnoquiAboutViewController.swift */; };
 		38FCA6A01F3AF019005AB6E1 /* UIImageView+FaceAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCA69F1F3AF019005AB6E1 /* UIImageView+FaceAware.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +52,13 @@
 		38C933641F3216FA00671A32 /* InputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputData.swift; sourceTree = "<group>"; };
 		38C9336A1F3236E800671A32 /* GnoquiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnoquiTableViewCell.swift; sourceTree = "<group>"; };
 		38C933731F323CFC00671A32 /* GnoquiViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiViewViewModel.swift; sourceTree = "<group>"; };
+		38C99BFB1F3E58C400CB0F3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		38C99BFC1F3E58E500CB0F3F /* ca-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ca-ES"; path = "ca-ES.lproj/Main.strings"; sourceTree = "<group>"; };
+		38C99C011F3E5B3600CB0F3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38C99C031F3E603200CB0F3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		38C99C041F3E603400CB0F3F /* ca-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ca-ES"; path = "ca-ES.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiDetailViewController.swift; sourceTree = "<group>"; };
+		38F1E00F1F3E093500AC4A32 /* GnoquiAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiAboutViewController.swift; sourceTree = "<group>"; };
 		38FCA69F1F3AF019005AB6E1 /* UIImageView+FaceAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+FaceAware.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,11 +154,14 @@
 		38C933511F3216BF00671A32 /* Gnoquis */ = {
 			isa = PBXGroup;
 			children = (
+				38C99BFD1F3E596100CB0F3F /* Localizable */,
 				38C9336F1F323BFD00671A32 /* Application Delegate */,
 				384BB66E1F378EEA00CADB4E /* Core Data Stack */,
 				38A7538E1F361A1B006B38A1 /* Storyboards */,
 				38C9336D1F323BC900671A32 /* View Controllers */,
+				38F1E0111F3E0D4900AC4A32 /* About View Controller */,
 				384BB6721F379CED00CADB4E /* Gnoqui Storage Controller */,
+				38C933721F323CAC00671A32 /* View Model */,
 				38BE87F91F334AB100F23FEA /* Extensiones */,
 				38C9336E1F323BE500671A32 /* Recursos */,
 				38C933591F3216C000671A32 /* Assets.xcassets */,
@@ -198,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				38C933541F3216BF00671A32 /* GnoquiViewController.swift */,
-				38C933721F323CAC00671A32 /* View Model */,
 				38C933701F323C1600671A32 /* Table View Cell */,
 			);
 			path = "Gnoqui View Controller";
@@ -212,6 +222,14 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		38C99BFD1F3E596100CB0F3F /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				38C99C021F3E5B3600CB0F3F /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		38E1FE331F33A410000AFFA5 /* Gnoqui Datail View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +237,14 @@
 				3886A32A1F34E2E900A63238 /* Table View Cell */,
 			);
 			path = "Gnoqui Datail View Controller";
+			sourceTree = "<group>";
+		};
+		38F1E0111F3E0D4900AC4A32 /* About View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				38F1E00F1F3E093500AC4A32 /* GnoquiAboutViewController.swift */,
+			);
+			path = "About View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +290,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"ca-ES",
 			);
 			mainGroup = 38C933461F3216BF00671A32;
 			productRefGroup = 38C933501F3216BF00671A32 /* Products */;
@@ -281,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C9335D1F3216C000671A32 /* LaunchScreen.storyboard in Resources */,
+				38C99C001F3E5B3600CB0F3F /* Localizable.strings in Resources */,
 				38C9335A1F3216C000671A32 /* Assets.xcassets in Resources */,
 				38C933581F3216C000671A32 /* Main.storyboard in Resources */,
 			);
@@ -298,6 +326,7 @@
 				38C4E6981F39A7100054F555 /* GetData.swift in Sources */,
 				38C933551F3216BF00671A32 /* GnoquiViewController.swift in Sources */,
 				389EA29B1F3C4A8900AD1F6C /* MenuViewControllerDelegate.swift in Sources */,
+				38F1E0101F3E093500AC4A32 /* GnoquiAboutViewController.swift in Sources */,
 				3886A32C1F34E31F00A63238 /* GnoquiDetailTableViewCell.swift in Sources */,
 				384BB66D1F378DA500CADB4E /* CoreDataStack.swift in Sources */,
 				384BB6741F379D2D00CADB4E /* GnoquiStorageController.swift in Sources */,
@@ -320,6 +349,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				38C933571F3216C000671A32 /* Base */,
+				38C99BFB1F3E58C400CB0F3F /* es */,
+				38C99BFC1F3E58E500CB0F3F /* ca-ES */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -332,6 +363,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		38C99C021F3E5B3600CB0F3F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38C99C011F3E5B3600CB0F3F /* es */,
+				38C99C031F3E603200CB0F3F /* en */,
+				38C99C041F3E603400CB0F3F /* ca-ES */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -339,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -396,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

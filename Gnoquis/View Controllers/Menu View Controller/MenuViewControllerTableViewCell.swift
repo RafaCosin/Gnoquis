@@ -20,18 +20,25 @@ class MenuViewControllerTableViewCell: UITableViewCell {
     }
     
     func configure(data : String, icono: String? ) {
+        let data = data
+        let filters = "Filters"
         boton.setTitle(data, for: .normal)
-        
-        if let ico = icono {
-            imgView.image = cargaIcono(iconName: ico)
+        if data ==  filters || data == "Salto"{
+            boton.isEnabled = false
+            boton.isUserInteractionEnabled = false
+            //boton.setTitle(data, for: .selected)
         }
         imgView.image = cargaIcono(iconName: icono!)
+
     }
     
     func cargaIcono(iconName: String) -> UIImage {
+        let iconFTF = UIImage(named: "halloween-father-and-son-gnome")
         if !iconName.isEmpty {
             return UIImage(named: iconName)!
         }
-        return UIImage(named: "duende_molon")!
+        return iconFTF!
+
+//        return UIImage(named: "duende_molon")!
     }
 }
