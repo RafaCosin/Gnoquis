@@ -21,6 +21,7 @@ class MenuViewControllerTableViewCell: UITableViewCell {
     
     func configure(data : String, icono: String? ) {
         boton.setTitle(data, for: .normal)
+        
         if let ico = icono {
             imgView.image = cargaIcono(iconName: ico)
         }

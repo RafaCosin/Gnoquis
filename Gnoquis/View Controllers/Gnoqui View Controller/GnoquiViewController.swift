@@ -13,7 +13,7 @@ class GnoquiViewController: UIViewController {
     var arrayGnoquis = [GnoquisMO]()
     var viewModel: GnoquiViewViewModel!
     var gnoquiStorage = GnoquiStorageController()
-    var data: Data?
+    var data: String!
     var hayDatos: Bool!
     let key = "coreDataLoad"
     
@@ -51,23 +51,22 @@ class GnoquiViewController: UIViewController {
                 destination.delegate = self
             }
         }
-        if segue.identifier == "showMenuXib" {
-            if let destination = segue.destination as? MenuViewController {
-                destination.delegate = self
-            }
-        }
     }
 }
+
+//************* Tratamiento del pase de parametros desde Menugnoquis
 extension GnoquiViewController: MenuViewControllerDelegate {
     func retornoValor(with: String) {
+        if  !with.isEmpty && with != "Cancel" {
+            data = with
+       
+        
         arrayGnoquis = gnoquiStorage.fetchGnoquis(filtro: with)
-        tableView.reloadData()
-        if with != "Id" {
-        title = "Gnoquis order by" + " \(with) "
-        } else {
-            title = "Gnoquis"
         }
+     
     }
+    
+ 
 }
 extension GnoquiViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -89,6 +88,14 @@ extension GnoquiViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configure(withViewModel: viewModel)
         }
     return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if data != nil {
+            let unwarp = data!
+            return "order by \(unwarp)"
+        }
+         return ""
     }
 
 }
