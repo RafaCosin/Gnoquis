@@ -13,9 +13,11 @@ class GnoquiViewController: UIViewController {
     var arrayGnoquis = [GnoquisMO]()
     var viewModel: GnoquiViewViewModel!
     var gnoquiStorage = GnoquiStorageController()
+    
+    //working area
     var data: String!
     var hayDatos: Bool!
-    let key = "coreDataLoad"
+    let key = coreDataLoad
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,7 +25,7 @@ class GnoquiViewController: UIViewController {
         super.viewDidLoad()
 
         hayDatos = getUserDefaults(key: key)
-        print("hay datos: \(hayDatos)")
+        
         if !hayDatos {
            getJson(url: gnomesURL!)
            setUserDefaults(key: key)
@@ -56,11 +58,12 @@ class GnoquiViewController: UIViewController {
     }
 }
 
-//************* Tratamiento del pase de parametros desde Menugnoquis
+//* Tratamiento del pase de parametros desde Menu gnoquis
+
 extension GnoquiViewController: MenuViewControllerDelegate {
     func retornoValor(with: String) {
 
-        if  !with.isEmpty && with != "Cancel" {
+        if  !with.isEmpty && with != cancelTXT {
             data = with
         
             arrayGnoquis = gnoquiStorage.fetchGnoquis(filtro: with)
@@ -95,7 +98,8 @@ extension GnoquiViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if data != nil {
             let unwarp = data!
-            return "order by \(unwarp)"
+            let order = NSLocalizedString("order by" ,comment: "")
+            return  order + " " + unwarp
         }
          return ""
     }

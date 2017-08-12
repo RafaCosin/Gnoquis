@@ -33,6 +33,7 @@ class GetData {
             if let data = data {
                 self.gnoquisMO = self.parseJsonMO(data: data)
                 if !self.gnoquisMO.isEmpty {
+                    print(self.gnoquisMO)
                     self.saveArrayGnoqui(gnoquiMO: self.gnoquisMO )
                     
                 }

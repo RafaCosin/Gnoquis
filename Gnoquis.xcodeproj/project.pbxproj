@@ -159,7 +159,6 @@
 				384BB66E1F378EEA00CADB4E /* Core Data Stack */,
 				38A7538E1F361A1B006B38A1 /* Storyboards */,
 				38C9336D1F323BC900671A32 /* View Controllers */,
-				38F1E0111F3E0D4900AC4A32 /* About View Controller */,
 				384BB6721F379CED00CADB4E /* Gnoqui Storage Controller */,
 				38C933721F323CAC00671A32 /* View Model */,
 				38BE87F91F334AB100F23FEA /* Extensiones */,
@@ -173,6 +172,7 @@
 		38C9336D1F323BC900671A32 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				38F1E0111F3E0D4900AC4A32 /* About View Controller */,
 				389EA2961F3C4A1A00AD1F6C /* Menu View Controller */,
 				38C933711F323C6300671A32 /* Gnoqui View Controller */,
 				38E1FE331F33A410000AFFA5 /* Gnoqui Datail View Controller */,
@@ -244,7 +244,8 @@
 			children = (
 				38F1E00F1F3E093500AC4A32 /* GnoquiAboutViewController.swift */,
 			);
-			path = "About View Controller";
+			name = "About View Controller";
+			path = "../About View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

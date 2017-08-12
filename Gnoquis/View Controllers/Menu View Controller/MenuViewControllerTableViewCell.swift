@@ -21,9 +21,10 @@ class MenuViewControllerTableViewCell: UITableViewCell {
     
     func configure(data : String, icono: String? ) {
         let data = data
-        let filters = "Filters"
+        let filters = "FILTERS"
+        let info = "INFO"
         boton.setTitle(data, for: .normal)
-        if data ==  filters || data == "Salto"{
+        if data ==  filters || data == info {
             boton.isEnabled = false
             boton.isUserInteractionEnabled = false
             //boton.setTitle(data, for: .selected)

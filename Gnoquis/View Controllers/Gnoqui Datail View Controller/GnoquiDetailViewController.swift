@@ -19,7 +19,7 @@ class GnoquiDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title =  NSLocalizedString("Notes", comment: "")  
         prepareTableview(table: tableView)
         viewModel = GnoquiViewViewModel(gnoqui: gnoquiStruct)
         iconoImg.loadImageUsingCache(withUrl: viewModel.thumbail)
