@@ -211,7 +211,7 @@
                                 <color key="backgroundColor" red="0.33333333329999998" green="0.31764705879999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="540" id="R9n-0w-GXb"/>
-                                    <constraint firstAttribute="width" constant="250" id="qma-Ga-ZfI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="qma-Ga-ZfI"/>
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" red="0.78431372549019607" green="0.85882352941176465" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -263,7 +263,6 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88J-ku-qOw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="Ah1-m7-7Bw"/>
                                     <constraint firstAttribute="height" constant="44" id="r0M-wf-0FR"/>
                                 </constraints>
                                 <items>

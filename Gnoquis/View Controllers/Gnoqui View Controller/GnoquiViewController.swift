@@ -15,7 +15,7 @@ class GnoquiViewController: UIViewController {
     var gnoquiStorage = GnoquiStorageController()
     
     //working area
-    var data: String!
+    var data = ""
     var hayDatos: Bool!
     let key = coreDataLoad
     
@@ -90,14 +90,14 @@ extension GnoquiViewController: UITableViewDataSource, UITableViewDelegate {
         viewModel = GnoquiViewViewModel(gnoqui: arrayGnoquis[indexPath.row])
  
         if let viewModel = viewModel  {
-            cell.configure(withViewModel: viewModel)
+            cell.configure(withViewModel: viewModel, data: data)
         }
     return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if data != nil {
-            let unwarp = data!
+        if !data.isEmpty {
+            let unwarp = data
             let order = NSLocalizedString("order by" ,comment: "")
             return  order + " " + unwarp
         }
