@@ -24,9 +24,7 @@ class GnoquiStorageController {
 
     //Read todos los gnoquis Gnoquis
     func fetchCoreData() -> [GnoquisMO] {
-        print("fetch coredata en storage controller")
         var fetchResultController : NSFetchedResultsController<GnoquisMO>
-        
         var arrayGnoquis: [GnoquisMO] = []
         
         let fetchRequest : NSFetchRequest<GnoquisMO> = GnoquisMO.fetchRequest()
@@ -34,7 +32,6 @@ class GnoquiStorageController {
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest , managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        
         
         do {
             try fetchResultController.performFetch()
@@ -46,9 +43,8 @@ class GnoquiStorageController {
             print("Fetch Gnoquis error :\(error.localizedDescription)")
         }
         return arrayGnoquis
-        
     }
-    // Seleccion  de un criterio
+    // Seleccion  por un criterio
     func fetchGnoquis (filtro : String) -> [GnoquisMO] {
         
         var gnoquis: [GnoquisMO] = []
@@ -56,9 +52,9 @@ class GnoquiStorageController {
         
         var fetchResultController : NSFetchedResultsController<GnoquisMO>
         let fetchRequest : NSFetchRequest<GnoquisMO> = GnoquisMO.fetchRequest()
-        //clausulas de filtro
+  
        
-            
+          //Posible v2 con busqueda por name
 //    
 //        let predicate1 = NSPredicate(format: "name == %@", filtro)
 //        let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1] )

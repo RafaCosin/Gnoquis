@@ -14,6 +14,7 @@ class MenuViewController: UIViewController {
    var menuItems = [ "FILTERS","Id", "Name", "Age", "Hair_color", "Weight", "Height", "INFO", "About"]
    var iconItems = ["lighthouse-keeper-gnome" ,"Inspector_Gnome-icon","Gangster_Gnome-icon","Monster_Costume_Gnome-icon","Haunted_Fairy_Gnomette-icon","Headless_Gnome-icon","Season_Spirit_Gnome-icon","", "troll-gnome"]
 
+    @IBOutlet var mainView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     //Referencia a VC que llama para retorno valores
@@ -21,8 +22,8 @@ class MenuViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareTableView()
-        setImageBackground()
+        prepareTableView(tableView: tableView)
+        setImageBackground(view: mainView)
        
     }
 
@@ -80,24 +81,4 @@ extension MenuViewController: UITableViewDataSource {
     
 }
 
-extension MenuViewController {
-    //para no dibujar rows vacios
-    func prepareTableView() {
-        tableView.tableFooterView = UIView(frame: .zero)
-        tableView.separatorStyle = .none
-    }
-    
-    func setImageBackground() {
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: imgBckView)?.draw(in: self.view.bounds)
-        
-        if let image: UIImage = UIGraphicsGetImageFromCurrentImageContext(){
-            UIGraphicsEndImageContext()
-            self.view.backgroundColor = UIColor(patternImage: image)
-        }else{
-            UIGraphicsEndImageContext()
-            debugPrint("Image not available")
-        }
-    }
 
-}

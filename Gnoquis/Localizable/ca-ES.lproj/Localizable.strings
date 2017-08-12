@@ -14,5 +14,5 @@
 "Friends" = "Amics";
 "Professions" = "Professions";
 "Hair color" = "Color de cabell";
-"tittleAbout" = "Sobre Gnoquis";
+"tittleAbout" = "Acerca de Gnoquis";
 "linesAbout" = "de Rafa Cosin :: rafa@rcosin.com \n Creada amb Xcode 9 beta 4 / Swift 3.8 \nFrameworks: \n CoreData: Persistència dades. Execució de filtres de selecció.\n Load d'entity amb fitxer i parseJSON \n UserDefaults: Control on/off json i load CoreData \n Utilitats externes: FaceAware *: (Beau Nouvelle) per a localització de les cares dels avatars. Si les imatges fossin de gent encertaria més. \nProbas : donar-li canya\nOptimitzada per a iPhone. \n \nIconos game farmville.com. \nPropiedad intel·lectual de les imatges pertany als seus creadors. \n \n(*) FaceAware github: https://github.com/BeauNouvelle/FaceAware?utm_source=mybridge&utm_medium=blog&utm_campaign =read_more ";

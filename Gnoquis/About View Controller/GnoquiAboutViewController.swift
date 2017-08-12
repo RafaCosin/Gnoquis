@@ -14,10 +14,12 @@ class GnoquiAboutViewController: UIViewController {
     
     @IBOutlet weak var textAbout: UITextView!
 
+    @IBOutlet var mainView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBar.topItem?.title = NSLocalizedString("tittleAbout", comment: "")
         textAbout.text = NSLocalizedString("linesAbout", comment: "")
+        setImageBackground(view: mainView)
     }
 
     override func didReceiveMemoryWarning() {

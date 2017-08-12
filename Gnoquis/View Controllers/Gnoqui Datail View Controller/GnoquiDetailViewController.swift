@@ -20,7 +20,7 @@ class GnoquiDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title =  NSLocalizedString("Notes", comment: "")  
-        prepareTableview(table: tableView)
+        prepareTableviewDetail(table: tableView)
         viewModel = GnoquiViewViewModel(gnoqui: gnoquiStruct)
         iconoImg.loadImageUsingCache(withUrl: viewModel.thumbail)
     }
@@ -39,7 +39,7 @@ extension GnoquiDetailViewController: UITableViewDataSource {
         }
         return cell
     }
-    func prepareTableview(table: UITableView) {
+    func prepareTableviewDetail(table: UITableView) {
         tableView.estimatedRowHeight = 80.0
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView(frame: .zero)

@@ -33,4 +33,22 @@ func changeHttps(urlString : String)-> String{
         return newString
 }
 
+//para no dibujar rows vacios
+func prepareTableView(tableView : UITableView) {
+    tableView.tableFooterView = UIView(frame: .zero)
+    tableView.separatorStyle = .none
+}
+
+func setImageBackground(view: UIView) {
+    UIGraphicsBeginImageContext(view.frame.size)
+    UIImage(named: imgBckView)?.draw(in: view.bounds)
+    
+    if let image: UIImage = UIGraphicsGetImageFromCurrentImageContext(){
+        UIGraphicsEndImageContext()
+         view.backgroundColor = UIColor(patternImage: image)
+    }else{
+        UIGraphicsEndImageContext()
+        debugPrint("Image not available")
+    }
+}
 
