@@ -23,28 +23,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iu" translatesAutoresizingMaskIntoConstraints="NO" id="yBb-9C-ErV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iu" translatesAutoresizingMaskIntoConstraints="NO" id="yBb-9C-ErV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brastlewark &quot;Lost Boys&quot; Adventure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmf-WM-5vE">
-                                <rect key="frame" x="25" y="437" width="325" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brastlewark &quot;Lost Boys&quot; Adventure" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmf-WM-5vE">
+                                <rect key="frame" x="46" y="437" width="293" height="60"/>
                                 <color key="backgroundColor" red="0.99435591700000003" green="0.79061456789999995" blue="0.067879124499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="N7w-VE-GQV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gnoquis  AXA  Quest!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-73-hDw">
-                                <rect key="frame" x="25" y="232" width="325" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gnoquis  AXA  Quest!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgj-73-hDw">
+                                <rect key="frame" x="46" y="232" width="284" height="77"/>
                                 <color key="backgroundColor" red="0.99435591700000003" green="0.79061456789999995" blue="0.067879124499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="ejh-zO-ZuR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="39"/>
                                 <color key="textColor" red="0.01480539076" green="0.015882016490000001" blue="0.039468066939999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.57737448134585179" green="0.66231757614213205" blue="0.14921739115558474" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tmf-WM-5vE" secondAttribute="bottom" constant="170" id="0YB-qn-lRY"/>
+                            <constraint firstItem="yBb-9C-ErV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="4SC-Ha-U37"/>
+                            <constraint firstItem="yBb-9C-ErV" firstAttribute="centerX" secondItem="rgj-73-hDw" secondAttribute="centerX" id="AoJ-S6-nXl"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tmf-WM-5vE" secondAttribute="trailing" constant="20" symbolic="YES" id="QhY-uS-Ztg"/>
+                            <constraint firstAttribute="trailing" secondItem="yBb-9C-ErV" secondAttribute="trailing" id="j95-yi-3nh"/>
+                            <constraint firstItem="yBb-9C-ErV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="pMo-YW-Viv"/>
+                            <constraint firstItem="rgj-73-hDw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="212" id="ukA-3S-jMm"/>
+                            <constraint firstItem="yBb-9C-ErV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xWO-QL-gVL"/>
+                            <constraint firstItem="rgj-73-hDw" firstAttribute="leading" secondItem="tmf-WM-5vE" secondAttribute="leading" id="yY9-Ja-8gD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
