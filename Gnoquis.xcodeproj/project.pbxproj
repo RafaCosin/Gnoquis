@@ -29,9 +29,19 @@
 		38E1FE351F33A45C000AFFA5 /* GnoquiDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */; };
 		38F1E0101F3E093500AC4A32 /* GnoquiAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F1E00F1F3E093500AC4A32 /* GnoquiAboutViewController.swift */; };
 		38FCA6A01F3AF019005AB6E1 /* UIImageView+FaceAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCA69F1F3AF019005AB6E1 /* UIImageView+FaceAware.swift */; };
+		40ACC661B4295AAFD60CB921 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456D2E4003E25DE46A413417 /* CoreVideo.framework */; };
+		47F44A67B47DAB2EC78EC791 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FE5E7629CA99928D059826 /* CoreText.framework */; };
+		4D118AEADAC879697D309B18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD5F87746BEFB130440ED1B /* AVFoundation.framework */; };
+		6F20B43EA86D7683B7DD4A3A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E85BBA2DC7644FE202ED3C /* AssetsLibrary.framework */; };
+		8AD4CB260D3B627221DC51A5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C5AC60437B54BABD705529 /* CoreTelephony.framework */; };
+		8D04A0AFD4DA3814E24AF6B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA3927FC7FD5820DE1FF420 /* SystemConfiguration.framework */; };
+		9734773CDBE9045EA89D33E7 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4FA46F40D398A04EADC1C8 /* BuddyBuildSDK.framework */; };
+		B9F8DEFCCB9192889E58C100 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC9FC250201EB21702DCFC7 /* QuartzCore.framework */; };
+		F24BA9828E060A445A1333B5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696D13BA5DC5095ABF209C58 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AC9FC250201EB21702DCFC7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		384BB66C1F378DA500CADB4E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		384BB6701F378F2200CADB4E /* Gnoqui.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gnoqui.xcdatamodel; sourceTree = "<group>"; };
 		384BB6731F379D2D00CADB4E /* GnoquiStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiStorageController.swift; sourceTree = "<group>"; };
@@ -60,6 +70,15 @@
 		38E1FE341F33A45C000AFFA5 /* GnoquiDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiDetailViewController.swift; sourceTree = "<group>"; };
 		38F1E00F1F3E093500AC4A32 /* GnoquiAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GnoquiAboutViewController.swift; sourceTree = "<group>"; };
 		38FCA69F1F3AF019005AB6E1 /* UIImageView+FaceAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+FaceAware.swift"; sourceTree = "<group>"; };
+		3DD5F87746BEFB130440ED1B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		456D2E4003E25DE46A413417 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		51FE5E7629CA99928D059826 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		5555C9CE461ABBB3A770A7FA /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		696D13BA5DC5095ABF209C58 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		70C5AC60437B54BABD705529 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7CA3927FC7FD5820DE1FF420 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B3E85BBA2DC7644FE202ED3C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		EB4FA46F40D398A04EADC1C8 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuddyBuildSDK.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +86,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9734773CDBE9045EA89D33E7 /* BuddyBuildSDK.framework in Frameworks */,
+				6F20B43EA86D7683B7DD4A3A /* AssetsLibrary.framework in Frameworks */,
+				47F44A67B47DAB2EC78EC791 /* CoreText.framework in Frameworks */,
+				8AD4CB260D3B627221DC51A5 /* CoreTelephony.framework in Frameworks */,
+				8D04A0AFD4DA3814E24AF6B1 /* SystemConfiguration.framework in Frameworks */,
+				B9F8DEFCCB9192889E58C100 /* QuartzCore.framework in Frameworks */,
+				4D118AEADAC879697D309B18 /* AVFoundation.framework in Frameworks */,
+				F24BA9828E060A445A1333B5 /* CoreMedia.framework in Frameworks */,
+				40ACC661B4295AAFD60CB921 /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34F090C1C3DA66A9452A4048 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB4FA46F40D398A04EADC1C8 /* BuddyBuildSDK.framework */,
+				B3E85BBA2DC7644FE202ED3C /* AssetsLibrary.framework */,
+				51FE5E7629CA99928D059826 /* CoreText.framework */,
+				70C5AC60437B54BABD705529 /* CoreTelephony.framework */,
+				7CA3927FC7FD5820DE1FF420 /* SystemConfiguration.framework */,
+				0AC9FC250201EB21702DCFC7 /* QuartzCore.framework */,
+				3DD5F87746BEFB130440ED1B /* AVFoundation.framework */,
+				696D13BA5DC5095ABF209C58 /* CoreMedia.framework */,
+				456D2E4003E25DE46A413417 /* CoreVideo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		384BB66E1F378EEA00CADB4E /* Core Data Stack */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +184,8 @@
 			children = (
 				38C933511F3216BF00671A32 /* Gnoquis */,
 				38C933501F3216BF00671A32 /* Products */,
+				34F090C1C3DA66A9452A4048 /* Frameworks */,
+				5555C9CE461ABBB3A770A7FA /* Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -491,11 +537,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9EDZ5LUZ76;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Gnoquis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafacosin.Gnoquis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -506,11 +557,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9EDZ5LUZ76;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Gnoquis/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rafacosin.Gnoquis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
